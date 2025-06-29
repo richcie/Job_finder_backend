@@ -1,0 +1,6 @@
+/target
+
+# Environment files (contains sensitive information)
+.env
+.env.local
+.env.*.local

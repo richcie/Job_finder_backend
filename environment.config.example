@@ -1,0 +1,45 @@
+# Job Finder Backend Environment Configuration
+# Copy this file to .env and modify the values as needed
+
+# Database Configuration
+DATABASE_URL=postgresql://postgres:password@localhost/job_finder_db
+
+# JWT Configuration  
+JWT_SECRET=your-super-secret-jwt-key-change-this-in-production-please
+JWT_EXPIRATION=86400
+
+# Server Configuration
+SERVER_HOST=127.0.0.1
+SERVER_PORT=8080
+
+# Logging Configuration
+RUST_LOG=info
+
+# =============================================================================
+# PRODUCTION CONFIGURATION EXAMPLES
+# =============================================================================
+# Uncomment and modify the following for production deployment:
+
+# For production, use a strong, randomly generated JWT secret (at least 32 characters)
+# JWT_SECRET=your-production-jwt-secret-key-with-at-least-32-characters-here
+
+# For production, you might want to bind to all interfaces
+# SERVER_HOST=0.0.0.0
+
+# For production, you might want a different port (common choices: 3000, 8000, 8080)
+# SERVER_PORT=3000
+
+# For production database, use your actual database credentials
+# DATABASE_URL=postgresql://db_user:db_password@db_host:5432/job_finder_production
+
+# For production logging (options: error, warn, info, debug, trace)
+# RUST_LOG=warn
+
+# =============================================================================
+# SETUP INSTRUCTIONS
+# =============================================================================
+# 1. Copy this file to .env: cp environment.config.example .env
+# 2. Update the DATABASE_URL with your PostgreSQL connection details
+# 3. Generate a secure JWT_SECRET for production (recommend using: openssl rand -base64 32)
+# 4. Adjust SERVER_HOST and SERVER_PORT as needed
+# 5. Set appropriate RUST_LOG level for your environment 
